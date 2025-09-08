@@ -15,7 +15,7 @@ const transitionVariants = {
       filter: "blur(0px)",
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         bounce: 0.3,
         duration: 1.5,
       },
@@ -30,7 +30,7 @@ export default function HeroSection() {
         <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
           <AnimatedGroup variants={transitionVariants}>
             <Link
-              href="#waitlist"
+              href="/"
               className="hover:bg-black/40 bg-black/30 group mx-auto flex w-fit items-center gap-4 rounded-full border border-white/40 p-1 pl-4 shadow-lg backdrop-blur-md transition-colors duration-300"
             >
               <span className="text-white text-sm font-medium">
@@ -88,7 +88,7 @@ export default function HeroSection() {
           >
             <div className="bg-white/20 rounded-[calc(var(--radius-xl)+0.125rem)] border border-white/30 p-0.5 backdrop-blur-md">
               <Link
-                href="#waitlist"
+                href="/"
                 className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow-sm bg-white text-black hover:bg-gray-100 h-12 rounded-xl px-8 text-base "
               >
                 <span className="text-nowrap">Join the Waitlist</span>
